@@ -1,0 +1,12 @@
+name: 'Login Azure PowerShell'
+description: 'Login Azure PowerShell wraps the PowerShell Login-AzAccount command. This enables to use PowerShell in you deployment scripts against correct Azure context.'
+inputs: 
+  creds:
+    description: 'Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS'
+    required: true
+branding:
+  icon: 'login.svg'
+  color: 'blue'
+runs:
+  using: 'node12'
+  main: 'main.js'
